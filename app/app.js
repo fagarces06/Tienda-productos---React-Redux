@@ -7,28 +7,32 @@ import { useDispatch } from 'react-redux';
 import { info_user } from './actions/AppActions';
 import { out_info_user } from './actions/AppActions';
 
-//1:30:54 MIN
+//1:37:18 MIN
 export default function App () {
-      const dispatch= useDispatch();
-      const {email}=useSelector(state=> state.user_reducer);email
+     // const dispatch= useDispatch();
+     // const {email}=useSelector(state=> state.user_reducer);email
  
       return (
             <div>
-                  <h1>Hello World</h1>
+                  
                   <Login></Login>    
-                  <button type="button" class="btn btn-primary" onClick={()=>{
-                        dispatch(info_user({
-                              email: "fabio.garces@gmail.com",
-                              fullname: "Fabio Andres Garces",
-                              token: "123456",  
-                        }))
 
-                  }}>Cambiar Usuario</button>
-                  <button type="button" class="btn btn-primary" onClick={()=>{
-                        dispatch(out_info_user());
-
-                  }}>Cerrar Sesion</button>
 
             </div>
       )
 }
+/*
+<button type="button" class="btn btn-primary" onClick={()=>{
+      dispatch(info_user({
+            email: "fabio.garces@gmail.com",
+            fullname: "Fabio Andres Garces",
+            token: "123456",  
+      }))
+
+}}>Cambiar Usuario</button>
+<button type="button" class="btn btn-primary" onClick={()=>{
+      dispatch(out_info_user());
+
+}}>Cerrar Sesion</button>
+
+*/
