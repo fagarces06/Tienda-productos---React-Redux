@@ -1,0 +1,44 @@
+{
+	"user":[
+		{
+			"id": 1,
+			"first_name": "fabio",
+			"last_name": "garces",
+			"email": "fagarces@gmail.com",
+			"pasword": "123456"
+		},
+
+		{
+			"id": 1,
+			"first_name": "Paula",
+			"last_name": "Garces",
+			"email": "paula.garces@gmail.com",	
+			"pasword": "francheska"
+		
+		}
+
+
+
+	],
+
+	"productos":[
+		{
+			"id":1,
+			"name": "Celular",
+			"price": 500,
+			"category": "Tecnologia"
+
+		},
+
+		{
+			"id": 2,
+			"name": "Sillon",
+			"Price": 500,
+			"category":"Hogar"
+		}
+
+	]
+	
+
+
+}
