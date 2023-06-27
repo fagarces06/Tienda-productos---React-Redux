@@ -1,11 +1,15 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Login from './reducer/components/login.jsx';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { useDispatch } from 'react-redux';
 import { info_user } from './actions/AppActions';
 import { out_info_user } from './actions/AppActions';
+import { Route,Routes } from 'react-router-dom';
+/////////COMPONENTES
+import Login from './reducer/components/login.jsx';
+import Home from './reducer/components/Home.jsx';
+
 
 //1:37:18 MIN
 export default function App () {
@@ -15,7 +19,12 @@ export default function App () {
       return (
             <div>
                   
-                  <Login></Login>    
+                  
+                  
+                  <Routes>
+                        <Route path='/' element={<Login></Login> }></Route>      
+                        <Route path='/home' element={<Home></Home> }></Route>    
+                  </Routes>   
 
 
             </div>
