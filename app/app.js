@@ -11,7 +11,7 @@ import Login from './reducer/components/login.jsx';
 import Home from './reducer/components/Home.jsx';
 
 
-//1:37:18 MIN
+//1:55:47 MIN
 export default function App () {
      // const dispatch= useDispatch();
      // const {email}=useSelector(state=> state.user_reducer);email
