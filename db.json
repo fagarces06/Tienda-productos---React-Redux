@@ -9,11 +9,19 @@
 		},
 
 		{
-			"id": 1,
+			"id": 2,
 			"first_name": "Paula",
 			"last_name": "Garces",
 			"email": "paula.garces@gmail.com",	
 			"pasword": "francheska"
+		
+		},
+		{
+			"id": 3,
+			"first_name": "Felipe",
+			"last_name": "Garces",
+			"email": "1@gmail.com",	
+			"pasword": "1"
 		
 		}
 

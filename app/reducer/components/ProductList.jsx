@@ -3,23 +3,33 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { useSelector, useDispatch } from 'react-redux';
 import cart_reducer from '../cartReducer';
+import { add_product } from '../../actions/cartActions';
+import { remove_product } from '../../actions/cartActions';
 export const ProductsList = (props) => {
   const {products}= props;
-  console.log("valor de la variable productos en componente productlist:",products);
+ 
   const dispatch = useDispatch();
 
   const { productsList } = useSelector(state => state.cart_reducer);
   
   const handleAddOrRemoveProduct = (productId) => {
-    console.log("da click");
-    /*
     const product = products.find(product => product.id === productId);
+    console.log("elemento que se va a agregar o eleiminar",product);
+    //dispatch(add_product(product))
+    
+    
     if (productsList.find(pdt => pdt.id === productId)) {
-      dispatch(removeProductFromCart(productId));
+      const id_int=parseInt(productId);
+      console.log("el tipo de var es:",typeof(id_int));
+      console.log("ingreso al dispacth de remove",productId,typeof(id_int));
+      
+      
+      dispatch(remove_product(id_int));
     } else {
-      dispatch(addProductToCart(product));
+      console.log("ingreso al dispacth de add");
+      dispatch(add_product(product));
     }
-    */
+    
   }
 
   return (
@@ -36,7 +46,7 @@ export const ProductsList = (props) => {
                 <p><b>Category:</b> {product.category}</p>
                 
                 <button
-                  className={`btn ${productsList.find(pdt => pdt.id === product.id) ? "btn-danger" : "btn-success"}`}
+                  className={`btn ${productsList.find(pdt => pdt.id === product.id) ? "btn-danger" : "btn-success"}`} //para colocar en verde al agregar y rojo al quitar producto
                   onClick={() => handleAddOrRemoveProduct(product.id)}
                 >
                   {productsList.find(pdt => pdt.id === product.id) ? "Remove" : "Add"} to Cart
